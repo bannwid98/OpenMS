@@ -1071,7 +1071,7 @@ protected:
                                                                  getHits().begin(); hit_it != pep_it->getHits().end();
                      ++hit_it)
                 {
-                  peptides_by_source[index].insert(hit_it->getSequence().toString());
+                  peptides_by_source[index].insert(hit_it->getSequence().toUnmodifiedString());
                   set<String> protein_accessions = hit_it->extractProteinAccessionsSet();
                   proteins_by_source[index].insert(protein_accessions.begin(), protein_accessions.end());
                 }
